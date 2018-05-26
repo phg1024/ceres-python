@@ -57,7 +57,7 @@ class CMakeBuild(build_ext):
         subprocess.check_call(['cmake', '--build', '.'] + build_args, cwd=self.build_temp)
 
 setup(
-    name='ceres-python',
+    name='ceres_python',
     version='0.0.1',
     author='Peihong Guo',
     author_email='phg@tamu.edu',

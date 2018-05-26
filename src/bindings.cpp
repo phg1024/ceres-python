@@ -109,20 +109,18 @@ py::object optimize(py::function func, py::function grad, py::buffer x0) {
 }
 
 
-PYBIND11_MODULE(cmake_example, m) {
+PYBIND11_MODULE(ceres_python, m) {
     m.doc() = R"pbdoc(
-        Pybind11 example plugin
+        Yet another python bindings for ceres
         -----------------------
-        .. currentmodule:: cmake_example
+        .. currentmodule:: ceres_python
         .. autosummary::
            :toctree: _generate
-           add
-           subtract
+           optimize
     )pbdoc";
 
     m.def("optimize", &optimize, R"pbdoc(
-        Add two numbers
-        Some other explanation about the add function.
+        Non-linear optimization entry
     )pbdoc");
 
 
